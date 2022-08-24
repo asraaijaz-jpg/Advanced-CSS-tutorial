@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Animations from './Components/Animations';
-import Javascript from './Components/javascript';
+import Javascript from './Components/javascript_codin_practice';
 
 function App() {
   return (

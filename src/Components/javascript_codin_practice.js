@@ -319,18 +319,11 @@ function Hollowtriangle(n)
 function pyramidpattern(n)
 {
     let string = "";
-    var k=1;
     for (let i=0; i<n; i++) 
     {
     for(let j=0; j<n; j++) 
     {
-      if(Math.floor(n/2) == j )
-      {
-        for(var t=0; t<n; t++)
-        {
         string+="*";
-        }
-      }
     }  
     string+='\n'; 
     }
@@ -338,6 +331,7 @@ function pyramidpattern(n)
     return string;
 }
 
+// helllooooo
 
 
 
