@@ -331,7 +331,7 @@ function pyramidpattern(n)
     return string;
 }
 
-// helllooooo
+
 
 
 
