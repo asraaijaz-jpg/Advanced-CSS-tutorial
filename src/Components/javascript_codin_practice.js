@@ -368,16 +368,99 @@ function Reversedpyramid(n)
     dec=dec-1;
     inc=inc+1;
     }
-    console.log(string);
+    // console.log(string);
+    return string;
+}
+
+function HollowPyramid(n)
+{
+    let string = "";
+    var dec=4;
+    var inc=4;
+
+    var dec1=5;
+    var inc1=3;
+
+    for (let i=0; i<n; i++) 
+    {
+    for(let j=0; j<9; j++) 
+    {
+      if(j>=dec && j<=inc)
+        {
+            if(i!=0 && i!=n-1 && (j>=dec1 && j<=inc1))
+            {
+                string+=" ";
+            }
+            else{
+                string+="*";
+            }
+        }
+      else{
+      string+=" ";
+        } 
+    }  
+    string+='\n';
+    dec=dec-1;
+    inc=inc+1;
+    dec1=dec1-1;
+    inc1=inc1+1;
+    }
+    // console.log(string);
     return string;
 }
 
 
+// ////////////////////////////////////////////////////////////////////////////
 
+function Dymond(n)
+{
+    let string = "";
+    var dec=4;
+    var inc=4;
+    var dec1=8;
+    var inc1=0;
 
+    for (let i=0; i<n+n; i++) 
+    {
 
+    if(i<=n-1)
+    {
+    for(let j=0; j<9; j++) 
+    {
+      if(j>=dec && j<=inc)
+        {
+      string+="*";
+        }
+      else{
+      string+=" ";
+        } 
+    }  
+    string+='\n';
+    dec=dec-1;
+    inc=inc+1;
+    }
 
+    else
+    { 
+        for(let f=0; f<9; f++) 
+        {
+          if(f<=dec1 && f>=inc1)
+            {
+          string+="*";
+            }
+          else{
+          string+=" ";
+            } 
+        }  
+        string+='\n';
+        dec1=dec1-1;
+        inc1=inc1+1; 
+    }
+    }
 
+    // console.log(string);
+    return string;
+}
 
 
 
@@ -411,8 +494,29 @@ var Dynamicvalue=5;
 <h2>Hollow Triangle</h2>{Hollowtriangle(7)}
 <h2>pyramidpattern</h2>{pyramidpattern(5)}
 <h2>Reversedpyramid</h2>{Reversedpyramid(5)}
+<h2>HollowPyramid</h2>{HollowPyramid(5)}
+<h2>Dymond</h2>{Dymond(5)}
+
     
     </div>
     )
 }
 export default Javascript
+
+
+// //////////////////////////////////////For Diamond and Pyramid Understanding/////////////////////////////
+
+// 9 =              4
+// 9 =            3 4 5
+// 9 =          2 3 4 5 6
+// 9 =        1 2 3 4 5 6 7
+// 9 =      0 1 2 3 4 5 6 7 8
+
+
+// 9 =      0 1 2 3 4 5 6 7 8
+// 9 =        1 2 3 4 5 6 7
+// 9 =          2 3 4 5 6
+// 9 =            3 4 5
+// 9 =              4
+
+
