@@ -315,24 +315,62 @@ function Hollowtriangle(n)
 }
 
 // ////////////////////////////////////////////////////////////////////
+////////////////////////////////// Too toughest////////////////////////////////////////
 
 function pyramidpattern(n)
 {
     let string = "";
+    var dec=4;
+    var inc=4;
+
     for (let i=0; i<n; i++) 
     {
-    for(let j=0; j<n; j++) 
+    for(let j=0; j<9; j++) 
     {
-        string+="*";
+      if(j>=dec && j<=inc)
+        {
+      string+="*";
+        }
+      else{
+      string+=" ";
+        } 
     }  
-    string+='\n'; 
+    string+='\n';
+    dec=dec-1;
+    inc=inc+1;
     }
-    console.log(string);
+    // console.log(string);
     return string;
 }
 
 
+// ///////////////////////////////////////////////////////////////////////////
 
+function Reversedpyramid(n)
+{
+    let string = "";
+    var dec=8;
+    var inc=0;
+
+    for (let i=0; i<n; i++) 
+    {
+    for(let j=0; j<9; j++) 
+    {
+      if(j<=dec && j>=inc)
+        {
+      string+="*";
+        }
+      else{
+      string+=" ";
+        } 
+    }  
+    string+='\n';
+    dec=dec-1;
+    inc=inc+1;
+    }
+    console.log(string);
+    return string;
+}
 
 
 
@@ -372,6 +410,7 @@ var Dynamicvalue=5;
 <h2>Downward triangle style pattern</h2>{downwardpattern(5)}
 <h2>Hollow Triangle</h2>{Hollowtriangle(7)}
 <h2>pyramidpattern</h2>{pyramidpattern(5)}
+<h2>Reversedpyramid</h2>{Reversedpyramid(5)}
     
     </div>
     )
