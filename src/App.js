@@ -1,7 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 import Animations from './Components/Animations';
-import Javascript from './Components/javascript_codin_practice';
+import Javascript from './Components/javascript_star_pattern';
+import HackerRank from './Components/Hacker_Rank_Task';
+
 
 function App() {
   return (
@@ -9,7 +11,8 @@ function App() {
     <br></br>
       <center><h1 style={{color:'white'}}>CSS Advanced Tutorials</h1></center>
       {/* <Animations/> */}
-      <Javascript/>
+      {/* <Javascript/> */}
+      <HackerRank/>
     </div>
   );
 }
