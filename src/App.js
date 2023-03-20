@@ -1,3 +1,4 @@
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Animations from './Components/Animations';
@@ -11,7 +12,7 @@ function App() {
     <br></br>
       <center><h1 style={{color:'white'}}>CSS Advanced Tutorials</h1></center>
       {/* <Animations/> */}
-      {/* <Javascript/> */}
+      <Javascript/>
       <HackerRank/>
     </div>
   );
